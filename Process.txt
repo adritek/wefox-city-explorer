@@ -1,0 +1,23 @@
+My process, so far...
+
+-------------------------------
+*Docker compose
+
+I changed the port to 3030 because of the conflict with CRA - they both want :3000
+
+-------------------------------
+*Endpoint
+
+The Berlin image_url returns 404 - so in /public you'll see a generic fallback image.
+As well the BCN image is smaller - I'd work on a way of normalising a standard size by default (but you're grabbing them all from random places, internally I'm sure you have some kind of standardisation).
+
+-------------------------------
+*App - see /public/architecture
+
+Visualised flow for the app - or how it could work for both the user and data.
+
+-------------------------------
+*CRUD
+
+Uses Express
+

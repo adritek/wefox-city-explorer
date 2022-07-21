@@ -1,38 +1,52 @@
-.App {
+.wrapper {
+  padding: 20px;
+}
+
+/* City Cards */
+ul.cities {
+  list-style: none;
+  padding: 0;
+}
+
+ul.cities li a {
+  text-decoration: none;
+}
+
+.cityCard {
+  border: 1px solid black;
+  overflow: hidden;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cityCardTitle {
+  color: #111; 
+  font-family: 'Alfa Slab One', 'Helvetica Neue', cursive;  
+  font-size: 5em;
+  /* line-height: 1; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Responsive */
+@media (min-width: 300px) and (max-width: 768px) {
+  /* Cards */
+  .cityCard {
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .cityCardTitle {
+    margin: 0.4em 0.1em;
+    font-size : clamp(2rem, 10vw, 5rem);
   }
-  to {
-    transform: rotate(360deg);
+
+  .cityCard img {
+    height: 100px;
+    width: 300px;
+    border: 1px solid hotpink;
+  }
+
+  body {
+    background-color: #de3163;
   }
 }
